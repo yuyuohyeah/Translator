@@ -1,0 +1,65 @@
+Function printShow [
+havingFun true : bool
+havingFun2 false : bool
+hug “hello” : string
+rug  “ class” : string //
+bar 4 : int
+boo 10 : int
+out(havingFun and havingFun2) // false
+out(havingFun or havingFun2) // true
+out(not(havingFun)) // false
+out(hug) // hello
+out(hug + rug) // hello class
+out(boo + bar) // 14
+out(boo - 2) // 8
+out(boo > bar) // true
+out(boo < bar) // false
+out(boo == bar) // false	
+] endFunc
+
+Function ifShow [
+havingFun true : bool
+if (havingFun): 
+out(“yayyy”) 
+elseIf (not(havingFun)):
+out(“noooo”) 
+endIf 
+] endFunc
+
+
+Function loopShow [
+havingFun true : bool
+i 4 : int
+onlyIf  ( havingFun ): <expr>
+onlyIf (i > 0): 
+out(i)
+i = i - 1
+endOnlyIf
+havingFun = false
+endOnlyIf 
+] endFunc
+
+Function invalid1 [
+havingFun true : bool
+boo 5 : int
+out(havingFun and boo) // bool and int 
+] endFunc
+
+Function invalid2 [
+adding 0:int
+subtracting 10:int
+onlyIf (Subtracting > 0):
+Adding + 1
+Subtracting - 1
+if (Subtracting == 5):
+out(if(adding ==5): adding = 10)
+endIf
+endOnlyIf
+] endFunc
+
+Function invalid3[
+booly1 true: bool
+number 2:int
+out(booly1 > number)
+
+] endFunc
